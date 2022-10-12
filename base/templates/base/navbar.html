@@ -1,0 +1,24 @@
+<div class="nav-wrapper">
+
+    <ul id="navigation">
+    <!-- Link around dots-wrapper added after tutorial video -->
+    <li><a href="{% url 'home' %}">
+        Home
+    </a></li>
+    <li><a href="{% url 'blogposts' %}"> Blog </a></li>
+    <li><a href="{% url 'posts' %}"> Portofolio </a></li>
+    
+</ul>
+    
+
+    <ul id="navigation">
+        <li><a href="{% url 'home' %}#contact">Contact</a></li>
+        {% if request.user.is_authenticated %}
+			<li><a href="{% url 'create_post' %}"> Create Post</a></li>
+			{% comment %} <li><a href="{% url 'logout' %}">Logout</a></li> {% endcomment %}
+		{% else %}
+			{% comment %} <li><a href="{% url 'login' %}">Login</a></li> {% endcomment %}
+		{% endif %}
+    </ul>
+
+</div>

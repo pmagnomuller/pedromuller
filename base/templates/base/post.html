@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'base/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="main-container">
+	<img class="thumbnail" src="{{post.thumbnail.url}}">
+	<h6 class="post-title">{{post.headline}}</h6>
+	<p class="post-intro">{{post.sub_headline}}</p>
+
+	<p>{{post.body|safe}}</p>
+	<hr>
+
+</div>
+	
+
+{% endblock content %}

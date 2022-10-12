@@ -1,0 +1,5 @@
+{
+    "html.format.contentUnformatted": "",
+    "html.format.templating": true,
+    "python.formatting.provider": "black"
+}
