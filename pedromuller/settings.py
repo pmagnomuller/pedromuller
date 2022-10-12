@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-cwyb=s643pef^c*b8^mg=zfix7gmh72v3#6_*@t#pd9dn3dzh-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','pedromuller.herokuapp.com']
 
 
 # Application definition
@@ -142,8 +142,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
-#STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
+#
 
 AWS_QUERYSTRING_AUTH = False
 
@@ -158,6 +157,7 @@ AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 PUBLIC_MEDIA_LOCATION = 'media'
 
 if DEBUG:
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
     STATIC_URL = '/static/' # Don't break local dev
     MEDIA_URL = '/images/'
 else:
