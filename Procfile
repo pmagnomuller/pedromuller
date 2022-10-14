@@ -1,1 +1,1 @@
-web: gunicorn --worker-class gevent --timeout 200 pedromuller.wsgi --log-file -
+web: gunicorn --workers=3 --worker-class gevent --timeout 200 pedromuller.wsgi --log-file -
