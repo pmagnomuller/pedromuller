@@ -86,6 +86,7 @@ WSGI_APPLICATION = 'pedromuller.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# AWS database that doesnt want to work with Heroku
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -96,6 +97,18 @@ DATABASES = {
         'POST': '5432',
     }
 }
+
+# Heroku Postgresql database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'd8sm4eruq3726q',
+#         'USER': 'ecdawchgbzktef',
+#         'PASSWORD': 'Ukulele112',
+#         'HOST': 'ec2-54-77-40-202.eu-west-1.compute.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
 
 
 # Password validation
