@@ -171,7 +171,7 @@ PUBLIC_MEDIA_LOCATION = 'media'
 if DEBUG:
     STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
     STATIC_URL = '/static/' 
-    django_heroku.settings(local())
+    django_heroku.settings(locals())
     MEDIA_URL = '/images/'
 else:
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
