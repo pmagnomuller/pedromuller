@@ -23,12 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = "django-insecure-cwyb=s643pef^c*b8^mg=zfix7gmh72v3#6_*@t#pd9dn3dzh-"
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
+ALLOWED_HOSTS = ["127.0.0.1","localhost","pedromuller.herokuapp.com"]
+
 
 
 # Application definition
@@ -87,28 +89,28 @@ WSGI_APPLICATION = 'pedromuller.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 # AWS database that doesnt want to work with Heroku
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'demo_1',
-        'USER': 'pedromuller',
-        'PASSWORD': 'Ukulele112',
-        'HOST': 'database-1.cqqsapqtryyc.eu-central-1.rds.amazonaws.com',
-        'POST': '5432',
-    }
-}
-
-# Heroku Postgresql database
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd8sm4eruq3726q',
-#         'USER': 'ecdawchgbzktef',
+#         'NAME': 'demo_1',
+#         'USER': 'pedromuller',
 #         'PASSWORD': 'Ukulele112',
-#         'HOST': 'ec2-54-77-40-202.eu-west-1.compute.amazonaws.com',
-#         'PORT': '5432',
+#         'HOST': 'database-1.cqqsapqtryyc.eu-central-1.rds.amazonaws.com',
+#         'POST': '5432',
 #     }
 # }
+
+# Heroku Postgresql database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd8sm4eruq3726q',
+        'USER': 'ecdawchgbzktef',
+        'PASSWORD': 'd6b10a952ffec376f90b6c1af2f3d1ac94cf79325dfdc86822d86ab334d5f893',
+        'HOST': 'ec2-54-77-40-202.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation
@@ -185,10 +187,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = env("EMAIL_PORT")
+EMAIL_PORT = '587'
 EMAIL_USE_TLS=True
-EMAIL_HOST_USER = env("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
+EMAIL_HOST_USER = 'pedro.magnomuller@gmail.com'
+EMAIL_HOST_PASSWORD = 'jukcagqabkbvcsgd'
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
