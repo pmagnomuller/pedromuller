@@ -90,11 +90,11 @@ WSGI_APPLICATION = 'pedromuller.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'N9ZQ5RoqzOV7G1D62nGD',
-        'HOST': 'containers-us-west-110.railway.app',
-        'PORT': '6036',
+        'NAME': 'demo_1',
+        'USER': 'pedromuller',
+        'PASSWORD': 'Ukulele112',
+        'HOST': 'database-1.cqqsapqtryyc.eu-central-1.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
