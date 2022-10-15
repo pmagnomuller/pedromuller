@@ -8,6 +8,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import django_heroku
 from pathlib import Path
 import environ
 
@@ -170,6 +171,7 @@ PUBLIC_MEDIA_LOCATION = 'media'
 if DEBUG:
     STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
     STATIC_URL = '/static/' 
+    django_heroku.settings(local())
     MEDIA_URL = '/images/'
 else:
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
