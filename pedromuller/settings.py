@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'pedromuller.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# Railway Postgresql database
+# AWS Postgresql database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
