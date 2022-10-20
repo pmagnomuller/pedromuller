@@ -60,8 +60,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_COOKIE_SECURE = False
-CSRF_TRUSTED_ORIGINS=['https://www.pedro-muller.de/']
+CSRF_COOKIE_SECURE = True
 
 ROOT_URLCONF = 'pedromuller.urls'
 
