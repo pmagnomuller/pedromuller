@@ -61,7 +61,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_COOKIE_SECURE = False
-CSRF_TRUSTED_ORIGINS=['https://*.YOUR_DOMAIN.COM']
+CSRF_TRUSTED_ORIGINS=['https://www.pedro-muller.de/']
 
 ROOT_URLCONF = 'pedromuller.urls'
 
