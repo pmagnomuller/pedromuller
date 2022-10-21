@@ -4,6 +4,7 @@ from base.forms import PostForm
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import EmailMessage
 from django.conf import settings
 from django.template.loader import render_to_string
@@ -100,6 +101,7 @@ def deletePost(request, slug):
 	context = {'item':post}
 	return render(request, 'base/delete.html', context)
 
+@csrf_exempt
 def sendEmail(request):
     
     if request.method == 'POST':
